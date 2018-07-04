@@ -1,0 +1,196 @@
+$p = 20px
+$h1 = 60px
+$h2 = 45px
+$h3 = 24px
+$h4 = 22px
+
+
+@font-face
+	font-family omnesM
+	src url(../fonts/omnes_medium-webfont.woff)
+	font-style normal
+	
+@font-face
+	font-family omnesR
+	src url(../fonts/omnes-regular-webfont.woff)
+	font-style normal
+
+@font-face
+	font-family omnesSB
+	src url(../fonts/omnes-semibold-webfont.woff)
+	font-style normal
+	
+@font-face
+	font-family chronicle
+	src url(../fonts/Chronicle_Display_Black.otf)
+	font-style normal
+	
+
+	
+// base---
+
+*, *:before, *:after
+	box-sizing: border-box;
+
+body
+	font-size 20px
+	font-family omnesR
+	font-weight normal
+
+p
+	font-size 20px
+	font-family omnesR
+	font-weight normal
+
+button
+	border-radius 50px
+	background white
+	color black
+	font-family omnesSB
+	font-size 18px
+	font-weight normal
+	padding 18px 60px
+	border none
+	letter-spacing 2px
+	transition all .25s ease
+	&:hover
+		cursor pointer
+	&:focus
+		outline none
+	&.-transparent
+		background transparent
+		border 2px solid white
+	&.-white
+		color white
+		&:hover 
+			background white
+			color black
+input:focus
+	outline none
+
+figure
+	margin 0
+
+h1,h2,h3,h4
+	margin 0
+	font-weight normal
+
+h1,h2
+	font-family chronicle
+
+h1
+	font-size $h1
+	font-weight normal
+	letter-spacing 1px
+	margin 10px 0
+	
+h2
+	font-size $h2
+	font-weight normal
+	margin 10px 0
+h3
+	font-family omnesR
+	font-size $h3
+	font-weight normal
+	margin 10px 0
+
+h4
+	font-size $h4
+	font-family omnesM
+	letter-spacing 2px
+	margin 10px 0
+	
+	
+section
+	&.-full-height
+		min-height 100vh
+		
+// ---base
+
+
+
+// modifier---
+
+._flex
+	display flex
+
+._flex-col
+	display flex
+	flex-direction column
+
+._v-center
+	align-items center
+	
+._h-center
+	justify-content center
+
+._align-center
+	text-align center
+
+._rel
+	position relative
+
+._abs
+	position absolute
+	
+._white
+	color white
+	
+._margin-center
+	margin-left auto
+	margin-right auto
+	
+// ---modifier
+
+
+	
+// class---
+
+.container
+	padding-right: 30px;
+	padding-left: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	width 1236px
+	@media (max-width: 1296px)
+		width unset
+		
+.carousel-home
+	top 0
+	left 0
+	width 100%
+	height 100%
+	z-index -1
+	.owl-dots
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		text-align center
+		bottom 50px
+	.owl-carousel
+		img
+			object-fit cover
+			height 100vh
+			width 100vw
+			
+.home-carousel
+	.wrapper
+		h3
+			margin: 32px 0 55px;
+			line-height: 30px;
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+			
+.section-search
+	background url('../img/bg-merah-pattern.jpg')
+	background-position center 
+	background-size contain
+	h2
+		max-width 1000px
+		margin-top 0
+		margin-bottom 0
+	.wrapper-text-search
+		padding 130px 0
+// ---class
